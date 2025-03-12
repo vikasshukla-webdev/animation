@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+
+    <style>
+          div{
+            height: 400px;
+            width: 400px;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        img{
+            height: 80%;
+            width: 80%;
+            padding: 40px;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+
+        .loader{
+            border: 10px solid rgb(233, 233, 233);
+            border-top: 10px solid #3498db;
+
+
+            &:hover{
+                animation: load 2s infinite;
+            }
+
+        }
+
+        @keyframes load{
+            from{
+
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+        .load{
+            border: 10px solid rgb(216, 203, 203);
+            background-color: gray;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            border-top: 3px solid black;
+            animation: load 4s infinite;
+
+        }
+
+        @keyframes load{
+           
+            from{
+
+            }
+            to{
+                transform: rotate(360deg) ;
+            }
+
+
+        }
+
+        .trans{
+            border: 2px solid black;
+            height: 80px;
+            width: 80px;
+            animation: trans 2s infinite  ;
+        }
+        @keyframes trans{
+            from{
+                transform: translate3d(20px,20px,0);
+                background-color: aqua;
+                right: 0px;
+
+            }
+            to{
+                transform: translate3d(200px,28px,0 );
+                background-color: rgb(230, 73, 73);
+                right:200px; 
+            }
+        }
+        .bounce{
+            border: 2px solid black;
+            height: 80px;
+            width: 80px;
+            position: absolute;
+            animation: bounce 2s  alternate infinite  ;
+        }
+        @keyframes bounce{
+            from{
+                transform: translate3d(10px,50px,100px);
+                background-color: aqua;
+
+            }
+            to{
+                transform: translate3d(115px,280px,0);
+                background-color: rgb(230, 73, 73);
+             
+            }
+        }
+        .contener{
+           
+            border: 4px solid black;
+            height: 400px;
+            width: 700px;
+            position: relative;
+            border-radius: -0%;
+            background-image: url(https://media.istockphoto.com/id/491863586/video/animated-cartoon-cloudy-sky-with-tree-and-ground.jpg?s=480x480&k=20&c=m7WgPb6uTqaYvwxuXcdaheH7NwshqJ9mBDmmrkXdQRM=);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .scl{
+            height: 110px;
+            width: 200px;
+            border: 3px solid black;
+            border-radius: -0%;
+            background-color: aqua;
+            animation: scl 4s ease-in 5;
+            text-align: center;
+
+        }
+        @keyframes scl{
+            0%{
+
+            }
+            40%{
+                transform: scaleX(-1);
+                background-color: rgb(7, 75, 58);
+            }
+            80%{
+                transform: scaleY(1);
+                background-color: rgb(129, 56, 197);
+            }
+            100%{
+                transform: scaleX(1) scaleY(1);
+                background-color: rgb(218, 125, 19);
+
+            }
+        }
+
+        .fad{ height: 110px;
+            width: 200px;
+            border: 3px solid black;
+            border-radius: -0%;
+            background-color: aqua;
+            animation: fad 4s ease-in 5;
+            text-align: center;
+
+        }
+
+        @keyframes fad{
+            from{
+                filter: opacity(0);
+
+            }
+            to{
+                filter: opacity(1);
+            }
+        }
+
+        .both{
+            display: flex;
+            gap: 20px;
+        }
+
+        button {
+ border: none;
+ color: #fff;
+ background-image: linear-gradient(30deg, #0400ff, #4ce3f7);
+ border-radius: 20px;
+ background-size: 100% auto;
+ font-family: inherit;
+ font-size: 17px;
+ padding: 0.6em 1.5em;
+}
+
+button:hover {
+ background-position: right center;
+ background-size: 200% auto;
+ -webkit-animation: pulse 2s infinite;
+ animation: pulse512 1.5s infinite;
+}
+
+@keyframes pulse512 {
+ 0% {
+  box-shadow: 0 0 0 0 #05bada66;
+ }
+
+ 70% {
+  box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+ }
+
+ 100% {
+  box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+ }
+}
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+    <h2> rotation as loding page using animation</h2>
+    <div class="load">
+
+    </div> <hr>
+    <br><br> <div class="=br">
+        <img src="https://uploads-ssl.webflow.com/5a9ee6416e90d20001b20038/631b23dfcc17e51d2790bc1c_r3-GIvQhplDY7cQWtqb2OZwieVU5bSowpHyapo5yRanv-gtFS_vuplY_X8Q_Q0d3vsnwhtAYt9hqdBxFMCoced5hTZ07XIqG-QCP9RHvLvSb7F07ipU_qTL47D6fDyhkRt0nltYuWUd6ZM9bD2SuzrO8IAtC605dNxJOtJS0ecBszeZoEFMH8RKPbQ.jpeg
+        " alt="">
+        <div class="loader">
+
+        </div>
+    </div>
+<br><hr><br>
+<h2>translate3d use in this example</h2>
+    <div class="trans">
+
+    </div>
+    <br><hr><br><h2>bounce using translate3d</h2>
+    <div class="contener"><div class="bounce"></div></div>
+    <hr><br>
+
+<div class="both"> <div class="scl">scale</div>
+<div class="fad">fade</div></div>
+
+<a href="second.html"><button>next</button> </a>   
+</body>
+</html>
+
